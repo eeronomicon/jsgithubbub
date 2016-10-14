@@ -1,0 +1,23 @@
+{
+  "name": "jsgithubbub",
+  "description": "Epicodus JavaScript Week 1 Independent Project",
+  "main": "gulpfile.js",
+  "authors": [
+    "HK Kahng"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/eeronomicon/jsgithubbub",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.15.1"
+  }
+}
