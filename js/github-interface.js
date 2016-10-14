@@ -33,7 +33,7 @@ var displayUser = function(userInfo) {
     }
     var userURL = userInfo.html_url;
     var userCreated = moment(userInfo.created_at).format('MM/DD/YYYY');
-    var userContent = '<div class="row"><div class="col-xs-2"><img src="' + userImg + '"></div><div class="col-xs-10"><h4>' + userHandle + ' (' + userName + ')</h4><p>On GitHub since ' + userCreated + '</p><p>GitHub Page: <a href="' + userURL + '" target="_new">' + userURL + '</a></p></div></div><br>';
+    var userContent = '<div class="row"><div class="col-xs-10"><h4>' + userHandle + ' (' + userName + ')</h4><p>On GitHub since ' + userCreated + '</p><p>GitHub Page: <a href="' + userURL + '" target="_new">' + userURL + '</a></p></div><div class="col-xs-2"><img src="' + userImg + '"></div></div><br>';
     $('#display_user').html(userContent);
   }
 }
