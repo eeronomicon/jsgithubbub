@@ -10,10 +10,11 @@ Exercise objectives: Create a website where users may enter a GitHub username in
 
 ## Setup/Installation Requirements
 
-* Download or clone the repository
-* Create a .env file at the project root and add your GitHub Personal Access token as exports.apiKey
-* Install the required dependencies catalogued in the package.json and bower.json files
-* Run 'gulp serve'
+* Download or clone the repository.
+* Create a .env file at the project root and add your GitHub Personal Access token as exports.apiKey.
+* If you do not have a Personal Access Token, create the .env file anyway and leave it empty.
+* Install the required dependencies catalogued in the package.json and bower.json files by running the install.sh script. You might need to change permissions on that file in order to run it.
+* Run 'gulp serve'.
 
 ## Known Bugs
 
