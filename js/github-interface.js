@@ -22,12 +22,29 @@ var displayRepos = function(reposList) {
   }
 }
 
+var displayUser = function(userInfo) {
+  $('#display_user').empty();
+  if (!userInfo.status) {
+    var userImg = userInfo.avatar_url;
+    var userHandle = userInfo.login;
+    var userName = userInfo.name;
+    if (!userName) {
+      userName = 'No Name Provided';
+    }
+    var userURL = userInfo.html_url;
+    var userCreated = moment(userInfo.created_at).format('MM/DD/YYYY');
+    var userContent = '<div class="row"><div class="col-xs-2"><img src="' + userImg + '"></div><div class="col-xs-10"><h4>' + userHandle + ' (' + userName + ')</h4><p>On GitHub since ' + userCreated + '</p><p>GitHub Page: <a href="' + userURL + '" target="_new">' + userURL + '</a></p></div></div><br>';
+    $('#display_user').html(userContent);
+  }
+}
+
 $(document).ready(function() {
   var myGithub = new GitHub ();
 
   $('#user_lookup').submit(function(event) {
     event.preventDefault();
     var userName = $('#user_name').val();
+    myGithub.getUser(userName, displayUser);
     myGithub.getRepos(userName, displayRepos);
   });
 });

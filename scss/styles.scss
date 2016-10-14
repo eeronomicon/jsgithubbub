@@ -1,4 +1,14 @@
+body {
+  margin-bottom: 20px;
+}
+
 .jumbotron {
+  margin-top: 20px;
   background-color: #337ab7;
   color: #fff;
+}
+
+#display_user img {
+  width: 100px;
+  border-radius:5%;
 }
