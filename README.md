@@ -15,13 +15,6 @@ Exercise objectives: Create a website where users may enter a GitHub username in
 * Install the required dependencies catalogued in the package.json and bower.json files
 * Run 'gulp serve'
 
-### Application Setup
-
-* Unzip and import production and test databases into mySQL.
-* Adjust mySQL port as appropriate based on your local server's settings.
-* Start the PHP server in the application's /web directory.
-* Open a web browser to the server's root.
-
 ## Known Bugs
 
 There are no known bugs in this application.
@@ -32,7 +25,7 @@ Contact me via GitHub!
 
 ## Technologies Used
 
-This app uses the following bits of Human ingenuity: HTML5, JavaScript, PHP, mySQL, jQuery, and Bootstrap.
+This app uses the following bits of Human ingenuity: HTML5, JavaScript, Node, jQuery, and Bootstrap.
 
 ### License
 
