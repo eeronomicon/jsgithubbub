@@ -2,7 +2,7 @@ var GitHub  = require('./../js/github.js').githubModule;
 
 var displayRepos = function(reposList) {
   $('#display_repos').empty();
-  if (reposList) {
+  if (!reposList.status) {
     $('#display_repos').append('<li class="list-group-item active">Repository Name / Description / Date Created (' + reposList.length + ' Repositories Returned)</li>');
     for (var i = 0; i < reposList.length; i++) {
       var repoName = reposList[i].name;
@@ -15,8 +15,10 @@ var displayRepos = function(reposList) {
       var liContent = '<li class="list-group-item"><a href="' + repoURL + '" target="_new">' + repoName + ' / ' + repoDescription + ' / ' + repoCreated + '</a></li>';
       $('#display_repos').append(liContent);
     }
+  } else if (reposList.status === 404) {
+    $('#display_repos').append('<li class="list-group-item active">No repositories found. Please check the user name.</li>');
   } else {
-    $('#display_repos').append('No repositories found. Please check the User name.');
+    $('#display_repos').append('<li class="list-group-item active">There was an error with your query.</li>');
   }
 }
 
