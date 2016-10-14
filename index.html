@@ -12,7 +12,16 @@
       <div class="jumbotron">
         <h1>GitHub Hub, Bub</h1>
       </div>
-
+      <h2>GitHub Repository Lookup</h2>
+      <form id="user_lookup">
+        <div class="form-group">
+          <label for="user_name">Enter User Name</label>
+          <input type="text" id="user_name" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-info">Show Me the Repos!</button>
+      </form>
+      <hr>
+      <ul class="list-group" id="display_repos"></ul>
       <hr>
       "A repo person's life is always intense." - paraphrasing Bud from the Alex Cox film 'Repo Man'
     </div>
